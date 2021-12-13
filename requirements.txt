@@ -3,7 +3,7 @@ pymysql
 mysqlclient
 djangorestframework
 django-redis
-
+django-cors-headers
 
 
 

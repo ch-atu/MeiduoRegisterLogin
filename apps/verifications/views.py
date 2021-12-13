@@ -14,7 +14,7 @@ from django_redis import get_redis_connection
 # Create your views here.
 
 
-# sms_codes/(?P<mobile>1[3-9]\d{9}/
+# GET: sms_codes/(?P<mobile>1[3-9]\d{9})/
 class SmsCodeView(APIView):
     def get(self, request, mobile):
         """短信验证码"""
