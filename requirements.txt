@@ -1,7 +1,8 @@
 django==2.2.10
 pymysql
 mysqlclient
-
+djangorestframework
+django-redis
 
 
 
