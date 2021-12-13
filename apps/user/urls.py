@@ -1,6 +1,8 @@
 from django.conf.urls import url
 from django.urls import path
+from .views import UserView
+
 
 urlpatterns = [
-    url()
+    url(r'^users/$', UserView.as_view())
 ]

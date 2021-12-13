@@ -4,7 +4,7 @@ mysqlclient
 djangorestframework
 django-redis
 django-cors-headers
-
+djangorestframework-jwt
 
 
 
