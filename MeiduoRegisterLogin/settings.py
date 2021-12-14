@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 
 import os
 import sys
+import datetime
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -127,6 +128,7 @@ USE_TZ = False
 
 STATIC_URL = '/static/'
 
+
 # 自定义认证系统模型类
 AUTH_USER_MODEL = 'user.User'
 
@@ -169,10 +171,17 @@ REST_FRAMEWORK = {
     ),
 }
 
+# jwt认证系统配置
+JWT_AUTH = {
+    # JWT有效期
+    'JWT_EXPIRATION_DELTA': datetime.timedelta(seconds=100),
 
+    # 修改JWT登录视图的构造响应数据的函数
+    'JWT_RESPONSE_PAYLOAD_HANDLER': 'user.utils.jwt_response_payload_handler',
+}
 
-
-
+# 修改Django用户认证后端类
+AUTHENTICATION_BACKENDS = ['user.utils.UsernameMobileAuthBackend']
 
 
 
