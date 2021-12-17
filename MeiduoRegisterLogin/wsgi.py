@@ -13,7 +13,7 @@ from django.core.wsgi import get_wsgi_application
 
 # os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'MeiduoRegisterLogin.settings')
 
-# 自定义配置路径.
+# 自定义配置路径
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'MeiduoRegisterLogin.settings.dev')
 # os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'MeiduoRegisterLogin.settings.pro')
 
