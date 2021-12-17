@@ -5,7 +5,11 @@ import sys
 
 
 def main():
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'MeiduoRegisterLogin.settings')
+    # os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'MeiduoRegisterLogin.settings')
+
+    # 自定义配置路径
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'MeiduoRegisterLogin.settings.dev')
+    # os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'MeiduoRegisterLogin.settings.pro')
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:

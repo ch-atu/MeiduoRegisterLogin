@@ -11,7 +11,7 @@
 */.idea
 */__pycache__
 */__pycache__/*
-*dump.rdb
+dump.rdb
 
 .vscode
 *.pid
