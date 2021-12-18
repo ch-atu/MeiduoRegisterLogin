@@ -21,7 +21,7 @@ class CreateUserSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = User  # 从User模型中映射序列化器字段
-        fields = ['id', 'username', 'password', 'password2', 'mobile', 'sms_code', 'allow', 'token']
+        fields = ['id', 'username', 'password', 'mobile', 'password2', 'sms_code', 'allow', 'token']
         extra_kwargs = {  # 修改字段选项
             'username': {
                 'min_length': 5,
